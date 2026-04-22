@@ -1,0 +1,36 @@
+#* Reverse a list without using reverse()
+def reverse_list(lst):
+    reversed_lst = []
+    for i in range(len(lst)-1, -1, -1):
+        reversed_lst.append(lst[i])
+    return reversed_lst
+
+
+print(reverse_list([1, 2, 3, 4, 5]))
+
+#Time Complexity: O(n) where n is the number of elements in the list.
+#Space Complexity: O(n) because we are creating a new list to store the reversed elements   
+
+#Approach 2: Using slicing
+def reverse_list(lst):
+    return lst[len(lst)-1::-1]
+
+print(reverse_list([1, 2, 3, 4, 5]))
+
+#Time Complexity: O(n) where n is the number of elements in the list.
+#Space Complexity: O(n) because slicing creates a new list to store the reversed elements.
+
+#Approach 3: Using in-place reversal
+def reverse_list(lst):
+    start=0
+    end=len(lst)-1
+    while start<end:
+        lst[start],lst[end] = lst[end],lst[start]
+        start +=1
+        end -=1
+    return lst
+
+print(reverse_list([1, 2, 3, 4, 5]))
+
+#Time Complexity: O(n) where n is the number of elements in the list.
+#Space Complexity: O(1) because we are reversing the list in-place.
