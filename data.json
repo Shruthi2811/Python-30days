@@ -1,0 +1,15 @@
+{
+    "id": 101,
+    "details": {
+        "name": "Alice",
+        "age": 20,
+        "address": {
+            "city": "Seattle",
+            "zip": "98101"
+        }
+    },
+    "marks": {
+        "math": 95,
+        "science": 88
+    }
+}

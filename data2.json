@@ -1,0 +1,47 @@
+[
+    {
+        "id": 101,
+        "details": {
+            "name": "Alice",
+            "age": 20,
+            "address": {
+                "city": "Seattle",
+                "zip": "98101"
+            }
+        },
+        "marks": {
+            "math": 95,
+            "science": 88
+        }
+    },
+    {
+        "id": 102,
+        "details": {
+            "name": "Bob",
+            "age": 21,
+            "address": {
+                "city": "Boston",
+                "zip": "02101"
+            }
+        },
+        "marks": {
+            "math": 89,
+            "science": 91
+        }
+    },
+    {
+        "id": 103,
+        "details": {
+            "name": "Charlie",
+            "age": 22,
+            "address": {
+                "city": "Chicago",
+                "zip": "60601"
+            }
+        },
+        "marks": {
+            "math": 92,
+            "science": 85
+        }
+    }
+]
