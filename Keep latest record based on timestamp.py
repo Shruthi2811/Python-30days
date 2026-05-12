@@ -1,0 +1,27 @@
+#* * Keep latest record based on timestamp
+import pandas as pd
+
+def create_df_from_dic(dictt):
+    df= pd.DataFrame(dictt)
+    df['updated_at'] = pd.to_datetime(df['updated_at'])
+    df = df.sort_values(by='updated_at', ascending=False)
+    df = df.drop_duplicates(subset='employee_id', keep='first')
+
+    return df
+
+data = {
+    "employee_id": [101, 102, 101, 103, 104, 104],
+    "name": ["Alice", "Bob", "Alice", "Charlie", "David", "David"],
+    "department": ["HR", "IT", "HR", "Finance", "IT", "IT"],
+    "salary": [50000, 60000, 52000, 70000, 65000, 65000],
+    "updated_at": [
+        "2024-01-10 09:00:00",
+        "2024-01-11 10:30:00",
+        "2024-02-15 14:00:00",
+        "2024-01-12 08:45:00",
+        "2024-01-20 16:00:00",
+        "2024-01-20 16:00:00"
+    ]
+}
+df = create_df_from_dic(data)
+print(df)
