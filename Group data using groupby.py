@@ -1,4 +1,6 @@
 #* Group data using groupby
+#* Calculate sum, count, mean
+#* Group by one column and summarize another
 import pandas as pd
 
 def create_df_from_dic(dictt):
